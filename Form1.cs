@@ -25,5 +25,10 @@ namespace Ejercicio3___Guía3_MM200149
 
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
