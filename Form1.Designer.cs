@@ -90,6 +90,7 @@ namespace Ejercicio3___Guía3_MM200149
             this.btneliminar.TabIndex = 2;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // gbxingresar
             // 

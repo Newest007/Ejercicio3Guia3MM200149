@@ -130,5 +130,22 @@ namespace Ejercicio3___Guía3_MM200149
 
 
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+
+            if (edit_indice > -1) //verifica si hay un índice seleccionado
+            {
+                Productos.RemoveAt(edit_indice);
+                edit_indice = -1; //resetea variable a -1
+                reseteo();
+                ActualizarGrid();
+            }
+            else
+            {
+                MessageBox.Show("Dar doble click sobre elemento para seleccionar y borrar ");
+            }
+
+        }
     }
 }
