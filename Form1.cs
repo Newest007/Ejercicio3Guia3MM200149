@@ -27,6 +27,10 @@ namespace Ejercicio3___Guía3_MM200149
             dtgvlistado.Visible = false;
             listadoproduct.Visible = false;
             btneliminar.Visible = false;
+
+            btningresardat.Visible = false;
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -44,6 +48,87 @@ namespace Ejercicio3___Guía3_MM200149
             listadoproduct.Visible = true;
             dtgvlistado.Visible = true;
             btneliminar.Visible = true;
+            gbxingresar.Visible = false;
+            btningresardat.Visible = true;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            gbxingresar.Visible = true;
+            listadoproduct.Visible = false;
+            dtgvlistado.Visible = false;
+            btneliminar.Visible = false;
+            btningresardat.Visible = false;
+        }
+
+
+        private void ActualizarGrid()
+        {
+            dtgvlistado.DataSource = null;
+            dtgvlistado.DataSource = Productos;
+        }
+
+        private void reseteo()
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            txtnombre.Clear();
+            txtdescripcion.Clear();
+            txtmarca.Clear();
+            txtprecio.Clear();
+            txtstock.Clear();
+        }
+
+        private void dtgvlistado_DoubleClick(object sender, EventArgs e)
+        {
+            DataGridViewRow selected = dtgvlistado.SelectedRows[0];
+            int posicion = dtgvlistado.Rows.IndexOf(selected);
+            edit_indice = posicion;
+
+            Producto product = Productos[posicion];
+
+            txtnombre.Text = product.Nombre;
+            txtdescripcion.Text = product.Descripcion;
+            txtmarca.Text = product.Marca;
+            txtprecio.Text = Convert.ToString(product.Precio);
+            txtstock.Text = Convert.ToString(product.Stock);
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            Producto product = new Producto();
+            product.Nombre = txtnombre.Text;
+            product.Descripcion = txtdescripcion.Text;
+            product.Marca = txtmarca.Text;
+  
+            product.Precio = float.Parse(txtprecio.Text);
+            product.Stock = int.Parse(txtstock.Text);
+
+            if (edit_indice > -1) //verifica si hay un índice seleccionado
+            {
+                Productos[edit_indice] = product;
+                edit_indice = -1;
+            }
+            else
+            {
+                Productos.Add(product); /*al arreglo de Productos le agrego el objeto creado con todos los datos que recolecté*/
+            }
+
+            ActualizarGrid();//llamamos al procedimiento que guarda en datagrid
+            reseteo(); //llamamos al método que resetea
+
+
         }
     }
 }
