@@ -75,16 +75,16 @@ namespace Ejercicio3___Guía3_MM200149
 
         private void reseteo()
         {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
             txtnombre.Clear();
             txtdescripcion.Clear();
             txtmarca.Clear();
             txtprecio.Clear();
             txtstock.Clear();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void dtgvlistado_DoubleClick(object sender, EventArgs e)
