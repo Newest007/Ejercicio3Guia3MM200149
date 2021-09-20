@@ -34,10 +34,8 @@ namespace Ejercicio3___Guía3_MM200149
             this.Imagen = new System.Windows.Forms.DataGridViewImageColumn();
             this.btneliminar = new System.Windows.Forms.Button();
             this.gbxingresar = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtprecio = new System.Windows.Forms.TextBox();
@@ -49,9 +47,10 @@ namespace Ejercicio3___Guía3_MM200149
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btningresardat = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ofdimagen = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvlistado)).BeginInit();
             this.gbxingresar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // listadoproduct
@@ -95,10 +94,9 @@ namespace Ejercicio3___Guía3_MM200149
             // gbxingresar
             // 
             this.gbxingresar.BackColor = System.Drawing.Color.LavenderBlush;
-            this.gbxingresar.Controls.Add(this.pictureBox1);
+            this.gbxingresar.Controls.Add(this.button1);
             this.gbxingresar.Controls.Add(this.button3);
             this.gbxingresar.Controls.Add(this.button2);
-            this.gbxingresar.Controls.Add(this.label1);
             this.gbxingresar.Controls.Add(this.txtstock);
             this.gbxingresar.Controls.Add(this.label6);
             this.gbxingresar.Controls.Add(this.txtprecio);
@@ -116,16 +114,6 @@ namespace Ejercicio3___Guía3_MM200149
             this.gbxingresar.TabIndex = 3;
             this.gbxingresar.TabStop = false;
             this.gbxingresar.Text = "Mantenimientos de Productos";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(205, 373);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // button3
             // 
@@ -146,16 +134,6 @@ namespace Ejercicio3___Guía3_MM200149
             this.button2.Text = "Guardar Datos";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe Print", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 384);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 26);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Imagen a cargar:";
             // 
             // txtstock
             // 
@@ -256,6 +234,20 @@ namespace Ejercicio3___Guía3_MM200149
             this.btningresardat.UseVisualStyleBackColor = true;
             this.btningresardat.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(102, 385);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 45);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Cargar Imagen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // ofdimagen
+            // 
+            this.ofdimagen.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,7 +265,6 @@ namespace Ejercicio3___Guía3_MM200149
             ((System.ComponentModel.ISupportInitialize)(this.dtgvlistado)).EndInit();
             this.gbxingresar.ResumeLayout(false);
             this.gbxingresar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,12 +286,12 @@ namespace Ejercicio3___Guía3_MM200149
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtmarca;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewImageColumn Imagen;
         private System.Windows.Forms.Button btningresardat;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog ofdimagen;
     }
 }
 

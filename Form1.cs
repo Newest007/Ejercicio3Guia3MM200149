@@ -111,6 +111,7 @@ namespace Ejercicio3___Guía3_MM200149
             product.Nombre = txtnombre.Text;
             product.Descripcion = txtdescripcion.Text;
             product.Marca = txtmarca.Text;
+            product.Imagenproduct = Convert.ToByte(Image.FromFile(ofdimagen.FileName));
   
             product.Precio = float.Parse(txtprecio.Text);
             product.Stock = int.Parse(txtstock.Text);
@@ -145,6 +146,27 @@ namespace Ejercicio3___Guía3_MM200149
             {
                 MessageBox.Show("Dar doble click sobre elemento para seleccionar y borrar ");
             }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if(ofdimagen.ShowDialog()== DialogResult.OK)
+                {
+                    string imagen = ofdimagen.FileName;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es uno de tipo imagen");
+                throw;
+            }
+
+
+
 
         }
     }

@@ -45,5 +45,16 @@ namespace Ejercicio3___Guía3_MM200149
             set { stock = value; }
         }
 
+        
+
+        byte imagenproduct;
+
+        public byte Imagenproduct
+        {
+            get { return imagenproduct; }
+            set { imagenproduct = value; }
+        }
+        
+
     }
 }
